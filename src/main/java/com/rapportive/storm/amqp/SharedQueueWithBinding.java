@@ -78,7 +78,7 @@ public class SharedQueueWithBinding implements QueueDeclaration {
                 queueName,
                 /* durable */ true,
                 /* non-exclusive */ false,
-                /* non-auto-delete */ false,
+                /* non-auto-delete */ true,
                 haPolicy == null ? null /* no arguments */ : haPolicy.asQueueProperies());
 
         channel.queueBind(queue.getQueue(), exchange, routingKey);
